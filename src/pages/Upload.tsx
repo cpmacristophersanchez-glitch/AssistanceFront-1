@@ -3,7 +3,7 @@ import { UploadCloud, FileSpreadsheet, CheckCircle, AlertCircle } from 'lucide-r
 import type { FileUploadStatus } from '../types';
 
 const Upload: React.FC = () => {
-  const [dragActive, setDragActive] = useState(false);
+  const dragActive =false;
   const [files, setFiles] = useState<FileUploadStatus[]>([]); // vacío al inicio
   const [isUploading, setIsUploading] = useState(false);
 

@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect  } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, Filter, ChevronRight, Download, Clock, BarChart2 } from 'lucide-react';
+import { Search, ChevronRight, Clock, BarChart2 } from 'lucide-react';
 import { TEAMS, AREAS } from '../services/mockData';
 import type { TeamType } from '../types.ts';
 

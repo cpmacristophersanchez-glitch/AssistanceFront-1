@@ -330,7 +330,7 @@ const Dashboard: React.FC = () => {
               <Tooltip content={<CustomTooltip />} cursor={{ fill: '#f8fafc' }} />
               <Bar dataKey="totalHours" radius={[6, 6, 0, 0]}>
                 {areaStats.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill="#3b82f6" fillOpacity={0.8 + (index * 0.05)} />
+                  <Cell key={`cell-${index}`} fill="#3b82f6" fillOpacity={0.8 + (index * 0.05)}/>
                 ))}
               </Bar>
             </BarChart>

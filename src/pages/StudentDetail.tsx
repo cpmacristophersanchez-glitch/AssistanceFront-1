@@ -5,8 +5,7 @@ import {
   Clock, 
   Calendar, 
   Edit2, 
-  Save, 
-  MapPin, 
+  Save,  
   Briefcase, 
   TrendingUp,
   GraduationCap,
@@ -25,32 +24,12 @@ import {
   Cell,
   ReferenceLine
 } from 'recharts';
-import { 
-  studentQuarterData,
-  studentAnnualData
-} from '../services/mockData';
-import type { Student, AttendanceRecord } from '../types';
+
+import type { Student } from '../types';
 
 type TimeRange = '1M' | '3M' | '1Y';
 
 // Interfaz para el formato específico de datos proporcionado
-interface ExtendedStudentData {
-  datosPersonales: {
-    Equipo: string;
-    Grupo: number;
-    Nivel: string;
-    Promedio: string;
-    Turno: string;
-    Área: string;
-  };
-  months: {
-    [monthKey: string]: {
-      attendance: number;
-      hourstotal: string; // "HH:MM"
-      hoursperday: { [dayKey: string]: string }; // "DD-MM_YYYY": "HH:MM"
-    };
-  };
-}
 
 
 const StudentDetail: React.FC = () => {
@@ -59,11 +38,7 @@ const StudentDetail: React.FC = () => {
 const studentFromState = location.state?.student; // Esto viene del navigate en StudentList
 
 const [student, setStudent] = useState<Student | null>(studentFromState ?? null);
-const [history, setHistory] = useState<AttendanceRecord[]>(studentFromState?.history ?? []);
-const [extendedData, setExtendedData] = useState<ExtendedStudentData>(studentFromState?.extendedData ?? {
-  datosPersonales: { grupo: 0, nivel: '', promedio: '', turno: '' },
-  months: []
-});
+
   const [isEditingAvg, setIsEditingAvg] = useState(false);
   const [tempAvg, setTempAvg] = useState<number>(0);
   const [timeRange, setTimeRange] = useState<TimeRange>('1M');
