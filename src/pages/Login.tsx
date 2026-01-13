@@ -17,7 +17,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
     setErrorMsg(''); // limpiar error previo
 
     try {
-      const res = await fetch('https://assistanceback-s8jr.vercel.app/login', {
+      const res = await fetch('https://assistanceback-1.vercel.app/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
