@@ -55,7 +55,7 @@ const [student, setStudent] = useState<Student | null>(studentFromState ?? null)
   const handleSaveAvg = async () => {
     try {
       if (student) {
-        const res =await fetch(`https://assistanceback-s8jr.vercel.app/subirpromedio`, {
+        const res =await fetch(`https://assistanceback-1.vercel.app/subirpromedio`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
