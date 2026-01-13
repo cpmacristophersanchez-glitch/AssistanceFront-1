@@ -25,7 +25,7 @@ const StudentList: React.FC = () => {
   const fetchStudents = async () => {
     try {
       setLoading(true);
-      const res = await fetch('https://assistanceback-s8jr.vercel.app/leeralumnos');
+      const res = await fetch('https://assistanceback-1.vercel.app/leeralumnos');
       const data = await res.json();
 
       const studentsArray: Student[] = Object.keys(data).map((key, index) => {
