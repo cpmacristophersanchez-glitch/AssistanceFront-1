@@ -11,7 +11,7 @@ const Upload: React.FC = () => {
   useEffect(() => {
   const fetchFiles = async () => {
     try {
-      const res = await fetch('https://assistanceback-12o4.vercel.app/historial');
+      const res = await fetch('https://assistanceback-1.vercel.app/historial');
       if (!res.ok) throw new Error('Error al cargar historial');
       const data: string[] = await res.json();
 
@@ -42,7 +42,7 @@ const Upload: React.FC = () => {
       const formData = new FormData();
       formData.append("file", file);
 
-      const res = await fetch("https://assistanceback-12o4.vercel.app/subir", {
+      const res = await fetch("https://assistanceback-1.vercel.app/subir", {
         method: "POST",
         body: formData,
       });
